@@ -12,5 +12,11 @@ public class Application extends Controller {
     public static void index() {
         render();
     }
+    
+    public static void startProduction() {
+    	Worker worker = new Worker();
+    	worker.name = "Simao";
 
+    	render(worker);
+    }
 }
