@@ -2,9 +2,8 @@
 <classpath>
 	<classpathentry excluding="views/**" kind="src" path="app"/>
 	<classpathentry kind="src" path="test"/>
-	
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/usr/share/playframework-1.2.5/framework/play-1.2.5.jar" sourcepath="/usr/share/playframework-1.2.5/framework/src" />
+	<classpathentry kind="lib" path="/usr/share/playframework-1.2.5/framework/play-1.2.5.jar" sourcepath="/usr/share/playframework-1.2.5/framework/src"/>
 	<classpathentry kind="lib" path="/usr/share/playframework-1.2.5/framework/lib/gson-2.2.jar"/>
 	<classpathentry kind="lib" path="/usr/share/playframework-1.2.5/framework/lib/commons-io-2.0.1.jar"/>
 	<classpathentry kind="lib" path="/usr/share/playframework-1.2.5/framework/lib/oval-1.50.jar"/>
@@ -72,6 +71,10 @@
 			<attribute name="javadoc_location" value="http://logging.apache.org/log4j/1.2/apidocs/"/>
 		</attributes>
 	</classpathentry>
-	
+	<classpathentry kind="lib" path="lib/joda-time/joda-time-2.1.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/DGES/lib/joda-time/joda-time-2.1-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="eclipse/classes"/>
 </classpath>
