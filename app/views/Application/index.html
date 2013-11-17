@@ -1,4 +1,17 @@
-#{extends 'main.html' /}
-#{set title:'Home' /}
+#{extends 'main.html' /} #{set title:'Home' /}
 
-#{welcome /}
+<div
+	style="font-size: 40pt; width: 80%; vertical-align:middle; height: 140pt; text-align: center; border: 1px solid black; margin: auto;">
+	${time}</div>
+
+<br>
+<div style="text-align: center;">
+
+	<div onClick="window.location = './startProductionLogin';"
+		style="cursor: pointer;font-size: 40pt; vertical-align:middle; width: 40%; height: 140pt; text-align: center; border: 1px solid black; margin: auto; display: inline-block;">
+		Start Task</div>
+	<div onClick="window.location = './finishProductionLogin';"
+		style="cursor: pointer;font-size: 40pt; vertical-align:middle; width: 40%; height: 140pt; text-align: center; border: 1px solid black; margin: auto; display: inline-block;">
+		Finish Task</div>
+
+</div>
