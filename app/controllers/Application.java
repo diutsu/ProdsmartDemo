@@ -3,6 +3,7 @@ package controllers;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+import models.Worker;
 import play.mvc.Controller;
 
 public class Application extends Controller {
