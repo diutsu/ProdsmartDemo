@@ -41,10 +41,9 @@ public class Application extends Controller {
     	if (productID == null) {
     		renderJSON(Product.findAll());
     	}
-    	
     	if (positionID == null) {
     		//We assume productID is already defined
-    		renderJSON(Task.find("from Task task where task.product_id = ?", productID).fetch());
+    		renderJSON(Task.find("from Task task where task.product.id = ?", (long)productID).fetch());
     	}
     	
     	if (time != null) {

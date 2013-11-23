@@ -1,17 +1,17 @@
 Worker(bob):
-   number: 1
    name: Bob
+   number: 1
 
-Worker(Simon):
-   number: 2
+Worker(simon):
    name: Simon
+   number: 2
 
 Product(arroz):
    code: 3455
    
-Company(Macrosoft):
-   manualInsertedQuantities: 3
-   name: Macrosoft
+Company(macrosoft):
+   manualInsertedQuantities: false
+   name: "Macrosoft"
    
 Task(kill):
    code: 123

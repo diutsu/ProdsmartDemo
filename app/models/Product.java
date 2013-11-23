@@ -6,5 +6,5 @@ import play.db.jpa.Model;
 
 @Entity
 public class Product extends Model {
-	String code;
+	public String code;
 }
