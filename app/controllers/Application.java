@@ -13,15 +13,23 @@ public class Application extends Controller {
         render(time);
     }
 
-    public static void startProduction() {
-        Worker worker = new Worker();
-        worker.name = "Simao";
-        render(worker);
-
+    public static void startProductionLogin() {
+    	render();
     }
-
-    public static void login() {
-        String action = "startProduction.html";
-        render(action);
+    public static void startProduction(Integer workerNumber) {
+    	//usar o number para determinar o worker, por enquanto está hardcoded
+        Worker worker = new Worker();
+        worker.name = "Simao (" + workerNumber.toString() + ")";
+        render(worker);
+    }
+    
+    public static void finishProductionLogin() {
+        render();
+    }
+    public static void finishProduction(Integer workerNumber) {
+    	//usar o number para determinar o worker, por enquanto está hardcoded
+        Worker worker = new Worker();
+        worker.name = "Simao (" + workerNumber.toString() + ")";
+        render();
     }
 }

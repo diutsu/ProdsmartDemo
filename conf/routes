@@ -4,7 +4,10 @@
 
 # Home page
 GET     /                                       Application.index
-GET     /startProduction                        Application.startProduction
+POST    /startProduction                        Application.startProduction
+GET		/startProductionLogin					Application.startProductionLogin
+POST 	/finishProduction						Application.finishProduction
+GET		/finishProductionLogin					Application.finishProductionLogin
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
