@@ -9,7 +9,6 @@ public class ApplicationTest extends FunctionalTest {
     public void fullTest() {
     	Fixtures.loadModels("data.yml");
     	
-     
         // Count things
         assertEquals(2, Worker.count());
     }
