@@ -8,6 +8,7 @@ POST    /startProduction                        Application.startProduction
 GET		/startProductionLogin					Application.startProductionLogin
 POST 	/finishProduction						Application.finishProduction
 GET		/finishProductionLogin					Application.finishProductionLogin
+POST	/production/set							Application.setProductionValues
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
