@@ -2,7 +2,6 @@ package controllers;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.List;
 
 import models.Product;
 import models.Task;
@@ -23,6 +22,7 @@ public class Application extends Controller {
     public static void startProduction(Integer workerNumber) {
         //usar o number para determinar o worker, por enquanto está hardcoded
         Worker worker = new Worker();
+        worker.id = (long) workerNumber;
         worker.name = "Simao (" + workerNumber.toString() + ")";
         render(worker);
     }
@@ -34,29 +34,30 @@ public class Application extends Controller {
     public static void finishProduction(Integer workerNumber) {
         //usar o number para determinar o worker, por enquanto está hardcoded
         Worker worker = new Worker();
+        worker.id = (long) workerNumber;
         worker.name = "Simao (" + workerNumber.toString() + ")";
-        render(worker);
+        render();
     }
 
-    public static void setProductionValues(Integer userID, Integer productID, Integer positionID,
-    		String time, Boolean start, Integer quantity, Integer waste) {
-    	if (productID == null) {
-    		renderJSON(Product.findAll());
-    	}
-    	
-    	if (positionID == null) {
-    		//We assume productID is already defined
-    		renderJSON(Task.find("from Task task where task.product_id = ?", productID).fetch());
-    	}
-    	
-    	if (time != null) {
-    		//The user has manually inputed the time field
-    	} else if (start == true) {
-    		//The user clicked on the start button
-    		//Must save in the temporary table of the DB the intermediate fields
-    		//Then redirect user to the main screen
-    	}
-    	
-    	//...
+    public static void setProductionValues(Integer userId, Integer productId, Integer positionId, String time, Boolean start,
+            Integer quantity, Integer waste) {
+        if (productId == null) {
+            renderJSON(Product.findAll());
+        }
+
+        if (positionId == null) {
+            //We assume productID is already defined
+            renderJSON(Task.find("from Task task where task.product.id = ?", (long) productId).fetch());
+        }
+
+        if (time != null) {
+            //The user has manually inputed the time field
+        } else if (start == true) {
+            //The user clicked on the start button
+            //Must save in the temporary table of the DB the intermediate fields
+            //Then redirect user to the main screen
+        }
+
+        //...
     }
 }

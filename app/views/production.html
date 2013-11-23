@@ -1,0 +1,48 @@
+#{extends 'main.html' /} #{set title:'Production' /}
+<div id="header">
+#{doLayout /}
+</div><div id="container">
+<h3 class="block">Olá, ${worker.name}! Escolha a <strong class="brown">encomenda</strong> ou o <strong class="blue">produto</strong> em que esteve a trabalhar:</h3>
+
+<div class="tile productBox">
+	<h3>Product1</h3>
+	<input type="hidden" value="1" />
+</div>
+<script>
+
+        $(function(){                                                                                                                                                                                                                        
+            $("#productionForm").submit(function(e) {
+            	$data = $(this).serialize();
+            	$url = $(this).attr("action");
+                $.ajax({
+                    type: "POST",
+                    url: $url,
+                    data: $data,
+                    success: function(data){
+                    	alert(data);
+                    },
+                    error: function(){
+                    },
+                });
+				e.preventDefault();
+            });
+            $(".productBox").click(function(e){
+            	$("#productionForm input:[name=productId]").val($(this).children("input:first").val());
+            	$("#productionForm").submit();
+            	e.preventDefault();
+            });
+            $("#productionForm").submit();
+        });
+ 
+</script>
+<form method="POST" action="/production/set" id="productionForm">
+	<input type="hidden" name="userId" value=${worker.id}	 />
+	<input type="hidden" name="productId"/>
+	<input type="hidden" name="positionId"/>
+	<input type="hidden" name="time"/>
+	<input type="hidden" name="start"/>
+	<input type="hidden" name="quantity"/>
+	<input type="hidden" name="waste"/>
+
+</form>
+</div>
