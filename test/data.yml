@@ -1,27 +1,27 @@
-worker(bob):
-	number:	1
-	name: Bob
+Worker(bob):
+   number: 1
+   name: Bob
 
-worker(Simon):
-	number:	2
-	name: Simon
+Worker(Simon):
+   number: 2
+   name: Simon
 
-product(arroz):
-	code: 3455
-	
-company(Macrosoft):
-	manualInsertedQuantities: 3
-	name: Macrosoft
-	
-task(kill):
-	code: 123
-	product_id: 1
+Product(arroz):
+   code: 3455
+   
+Company(Macrosoft):
+   manualInsertedQuantities: 3
+   name: Macrosoft
+   
+Task(kill):
+   code: 123
+   product_id: 1
 
-task(ressurect):
-	code: 666
-	product_id: 2
+Task(ressurect):
+   code: 666
+   product_id: 2
 
-task(cook):
-	code: 999
-	product_id: 3
+Task(cook):
+   code: 999
+   product_id: 3
 
