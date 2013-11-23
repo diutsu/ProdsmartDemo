@@ -1,7 +1,27 @@
-# you describe your data using the YAML notation here
-# and then load them using Fixtures.load("data.yml")
+worker(bob):
+	number:	1
+	name: Bob
 
-# User(bob):
-#   email: bob@gmail.com
-#   password: secret
-#   fullname: Bob
+worker(Simon):
+	number:	2
+	name: Simon
+
+product(arroz):
+	code: 3455
+	
+company(Macrosoft):
+	manualInsertedQuantities: 3
+	name: Macrosoft
+	
+task(kill):
+	code: 123
+	product_id: 1
+
+task(ressurect):
+	code: 666
+	product_id: 2
+
+task(cook):
+	code: 999
+	product_id: 3
+
