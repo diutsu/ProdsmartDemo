@@ -10,6 +10,11 @@ import play.mvc.Controller;
 
 public class Application extends Controller {
 
+	{
+		Fixtures.deleteDatabase();
+		Fixtures.loadModels("data.yml");
+	}
+	
     public static void index() {
         String time = new SimpleDateFormat("HH:mm:ss").format(Calendar.getInstance().getTime());
         render(time);
