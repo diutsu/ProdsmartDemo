@@ -1,4 +1,4 @@
-#{extends 'main.html' /}
+#{extends 'production.html' /}
 #{set title:'finish Production' /}
 #{set 'moreStyles'}
 	#{stylesheet 'production.css' /}
@@ -32,28 +32,3 @@
 		</td>
 	</tr>
 </table>
-
-<h3 class="block">Olá, ${worker.name}! Escolha a <strong class="brown">encomenda</strong> ou o <strong class="blue">produto</strong> em que esteve a trabalhar:</h3>
-
-<form method="POST" action="/production/set" id="test">
-	<input type="hidden" name="userID">
-	<input type="hidden" name="productID">
-	<input type="hidden" name="positionID">
-	<input type="hidden" name="time">
-	<input type="hidden" name="start">
-	<input type="hidden" name="quantity">
-	<input type="hidden" name="waste">
-	
-	<div class="tile">
-		<h3>Product1</h3>
-	</div>
-</form>
-
-<script>
-	$("#test").submit(function(e){
-		e.preventDefault();
-	});
-	$('.tile').click(function() {
-		  $('#test').submit();
-	});
-</script>
