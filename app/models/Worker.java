@@ -7,5 +7,9 @@ import play.db.jpa.Model;
 @Entity
 public class Worker extends Model {
 	public String name;
-	Integer number;
+	public Integer number;
+
+	public Integer getNumber() {
+		return number;
+	}
 }
